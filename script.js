@@ -5,7 +5,7 @@ const cards = ["A", "A", "B", "B", "C", "C", "D", "D", "E", "E", "F", "F", "G", 
 let firstCard = null;
 let secondCard = null;
 let lockBoard = false;
-let matchCount= 0;
+let matchCount = 0;
 let unMatchCount = 0;
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -76,6 +76,10 @@ function resetBoard() {
 }
 
 function restartGame() {
+    matchCount = 0;
+    unMatchCount = 0;
+    //matchedCountEl.textContent = matchCount;
+    //unmatchedCountEl.textContent = unMatchCount;
     resetBoard();
     createBoard();
 }

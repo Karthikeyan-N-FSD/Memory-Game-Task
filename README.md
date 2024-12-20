@@ -10,11 +10,8 @@ You can play the game online at: [https://kaz-memory-game.netlify.app/](https://
 - Responsive design for mobile devices.
 - Restart button to reset the game.
 
----
-
 ## Technologies Used
 - HTML
 - CSS (for styling)
 - JavaScript (for game logic)
 
----

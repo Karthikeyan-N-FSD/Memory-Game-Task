@@ -1,9 +1,12 @@
 const gameBoard = document.getElementById('game-board');
+const matchedCountEl = document.getElementById('matchedCount');
+const unmatchedCountEl = document.getElementById('unmatchedCount');
 const cards = ["A", "A", "B", "B", "C", "C", "D", "D", "E", "E", "F", "F", "G", "G", "H", "H"];
 let firstCard = null;
 let secondCard = null;
 let lockBoard = false;
-
+let matchCount= 0;
+let unMatchCount = 0;
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -52,6 +55,8 @@ function checkMatch() {
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
+    matchCount++;
+    matchedCountEl.textContent = matchCount;
     resetBoard();
 }
 
@@ -62,6 +67,8 @@ function unflipCards() {
         secondCard.classList.remove('flipped');
         resetBoard();
     }, 1000);
+    unMatchCount++;
+    unmatchedCountEl.textContent = unMatchCount;
 }
 
 function resetBoard() {

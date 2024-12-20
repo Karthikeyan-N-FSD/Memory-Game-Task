@@ -10,12 +10,20 @@
 
 <body>
     <header>
-        <h1>Memory Game</h1>
-        <button id="restart-btn" onclick="restartGame()">Restart</button>
+        <div class="stats">
+            Matched Clicks: <span id="matchedCount">0</span>
+        </div>
+        <div class="title-center">
+            <h1 style="color:gold">Memory Game</h1>
+            <button id="restart-btn" onclick="restartGame()">Restart</button>
+        </div>
+        <div class="stats">
+            Unmatched Clicks: <span id="unmatchedCount">0</span>
+        </div>
     </header>
     <div id="game-board"></div>
-        <script src="script.js"></script>
-        <br>
+    <script src="script.js"></script>
+    <br>
 </body>
 
 </html>

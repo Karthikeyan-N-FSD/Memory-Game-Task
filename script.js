@@ -78,8 +78,8 @@ function resetBoard() {
 function restartGame() {
     matchCount = 0;
     unMatchCount = 0;
-    //matchedCountEl.textContent = matchCount;
-    //unmatchedCountEl.textContent = unMatchCount;
+    matchedCountEl.textContent = matchCount;
+    unmatchedCountEl.textContent = unMatchCount;
     resetBoard();
     createBoard();
 }
